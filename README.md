@@ -38,7 +38,7 @@ In a file called `extensions.py`, implement a program that prompts the user for 
 
 If the file’s name ends with some other suffix or has no suffix at all, output application/octet-stream instead, which is a common default.
 
-## Fuel Gauge
+## 📁FUEL_GAUGE
 
 Fuel gauges indicate, often with fractions, just how much fuel is in a tank. For instance 1/4 indicates that a tank is 25% full, 1/2 indicates that a tank is 50% full, and 3/4 indicates that a tank is 75% full.
 
