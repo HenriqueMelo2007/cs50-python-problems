@@ -5,8 +5,10 @@ def main():
             x, y = user_input.split('/')
             x = int(x)
             y = int(y)
-            if y == 0 or x > y:
+            if x > y:
                 raise ValueError
+            if y == 0:
+                raise ZeroDivisionError
             percentage = round(x / y * 100)
             if percentage <= 1:
                 print("E")
