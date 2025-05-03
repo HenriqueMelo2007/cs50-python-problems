@@ -1,12 +1,8 @@
 def main():
     x, y = get_fraction()
     percentage = round(x / y * 100)
-    if percentage <= 1:
-        print("E")
-    elif percentage >= 99:
-        print("F")
-    else:
-        print(f"{percentage}%")
+    result = get_result(percentage)
+    print(result)
 
 
 def get_fraction():
@@ -23,6 +19,15 @@ def get_fraction():
             return x, y
         except (ValueError, ZeroDivisionError):
             continue
+
+
+def get_result(percentage):
+    if percentage <= 1:
+        return "E"
+    elif percentage >= 99:
+        return "F"
+    else:
+        return f"{percentage}%"
 
 
 if __name__ == "__main__":
