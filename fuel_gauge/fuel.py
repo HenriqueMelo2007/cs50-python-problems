@@ -1,11 +1,11 @@
 def main():
-    x, y = get_fraction()
-    percentage = round(x / y * 100)
+    x, y = get_user_input()
+    percentage = get_percentage(x, y)
     result = get_result(percentage)
     print(result)
 
 
-def get_fraction():
+def get_user_input():
     while True:
         try:
             user_input = input("Fraction: ")
@@ -19,6 +19,11 @@ def get_fraction():
             return x, y
         except (ValueError, ZeroDivisionError):
             continue
+
+
+def get_percentage(x, y):
+    percentage = x / y * 100
+    return round(percentage)
 
 
 def get_result(percentage):
