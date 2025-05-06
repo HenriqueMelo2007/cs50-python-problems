@@ -1,4 +1,4 @@
-# Basic python exercises from CS50P 2022
+# Python exercises from CS50P 2022
 
 ## 📁PLAYBACK_SPEED (problem set 0)
 
