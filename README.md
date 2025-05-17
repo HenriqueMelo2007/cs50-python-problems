@@ -1,5 +1,13 @@
 # Python exercises from CS50P 2022
 
+## 📁NUMB3RS (problem set 7)
+
+In Season 5, Episode 23 of _NUMB3RS_, a supposed IP address appears on screen, `275.3.6.28`, which isn’t actually a valid IPv4 (or IPv6) address.
+
+An IPv4 address is a numeric identifier that a device (or, on TV, hacker) uses to communicate on the internet, akin to a postal address in the real world, typically formatted in dot-decimal notation as #.#.#.#. But each # should be a number between 0 and 255, inclusive. Suffice it to say 275 is not in that range! If only NUMB3RS had validated the address in that scene!
+
+In a file called `numb3rs.py`, implement a function called validate that expects an IPv4 address as input as a str and then returns True or False, respectively, if that input is a valid IPv4 address or not.
+
 ## 📁LINES_OF_CODE (problem set 6)
 
 One way to measure the complexity of a program is to count its number of lines of code (LOC), excluding blank lines and comments. For instance, a program like
