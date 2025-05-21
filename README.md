@@ -42,6 +42,19 @@ Even so, in a file called `lines.py`, implement a program that expects exactly o
 
 Assume that any line that starts with #, optionally preceded by whitespace, is a comment. (A docstring should not be considered a comment.) Assume that any line that only contains whitespace is blank.
 
+## 📁GUESSING_GAME (problem set 4)
+
+In a file called `game.py`, implement a program that:
+
+Prompts the user for a level _n_ 
+- If the user does not input a positive integer, the program should prompt again.
+- Randomly generates an integer between 1 and 
+_n_ inclusive, using the random module.
+- Prompts the user to guess that integer. If the guess is not a positive integer, the program should prompt the user again.
+  - If the guess is smaller than that integer, the program should output Too small! and prompt the user again.
+  - If the guess is larger than that integer, the program should output Too large! and prompt the user again.
+  - If the guess is the same as that integer, the program should output Just right! and exit.
+
 ## 📁LITTLE_PROFESSOR (problem set 4)
 
 One of David’s first toys as a child, funny enough, was Little Professor, a “calculator” that would generate ten different math problems for David to solve. For instance, if the toy were to display 4 + 0 = , David would (hopefully) answer with 4. If the toy were to display 4 + 1 = , David would (hopefully) answer with 5. If David were to answer incorrectly, the toy would display EEE. And after three incorrect answers for the same problem, the toy would simply display the correct answer (e.g., 4 + 0 = 4 or 4 + 1 = 5).
@@ -53,7 +66,7 @@ In a file called `professor.py`, implement a program that:
 - Prompts the user to solve each of those problems. If an answer is not correct (or not even a number), the program should output `EEE` and prompt the user again, allowing the user up to three tries in total for that problem. If the user has still not answered correctly after three tries, the program should output the correct answer.
 - The program should ultimately output the user’s score: the number of correct answers out of 10.
 
-## 📁FELIPES_TAQUERIA
+## 📁FELIPES_TAQUERIA (problem set 3)
 
 One of the most popular places to eat in Harvard Square is Felipe’s Taqueria, which offers a menu of entrees, per the dict below, wherein the value of each key is a price in dollars:
 
