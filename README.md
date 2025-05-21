@@ -53,6 +53,26 @@ In a file called `professor.py`, implement a program that:
 - Prompts the user to solve each of those problems. If an answer is not correct (or not even a number), the program should output `EEE` and prompt the user again, allowing the user up to three tries in total for that problem. If the user has still not answered correctly after three tries, the program should output the correct answer.
 - The program should ultimately output the user’s score: the number of correct answers out of 10.
 
+## 📁FELIPES_TAQUERIA
+
+One of the most popular places to eat in Harvard Square is Felipe’s Taqueria, which offers a menu of entrees, per the dict below, wherein the value of each key is a price in dollars:
+
+```python
+{
+    "Baja Taco": 4.25,
+    "Burrito": 7.50,
+    "Bowl": 8.50,
+    "Nachos": 11.00,
+    "Quesadilla": 8.50,
+    "Super Burrito": 8.50,
+    "Super Quesadilla": 9.50,
+    "Taco": 3.00,
+    "Tortilla Salad": 8.00
+}
+```
+
+In a file called `taqueria.py`, implement a program that enables a user to place an order, prompting them for items, one per line, until the user inputs control-d (which is a common way of ending one’s input to a program). After each inputted item, display the total cost of all items inputted thus far, prefixed with a dollar sign ($) and formatted to two decimal places. Treat the user’s input case insensitively. Ignore any input that isn’t an item. Assume that every item on the menu will be titlecased.
+
 ## 📁FUEL_GAUGE (problem set 3)
 
 Fuel gauges indicate, often with fractions, just how much fuel is in a tank. For instance 1/4 indicates that a tank is 25% full, 1/2 indicates that a tank is 50% full, and 3/4 indicates that a tank is 75% full.
