@@ -8,6 +8,44 @@ An IPv4 address is a numeric identifier that a device (or, on TV, hacker) uses t
 
 In a file called `numb3rs.py`, implement a function called validate that expects an IPv4 address as input as a str and then returns True or False, respectively, if that input is a valid IPv4 address or not.
 
+## 📁SCOURGIFY (problem set 6)
+
+Data, too, often needs to be “cleaned,” as by reformatting it, so that values are in a consistent, if not more convenient, format. Consider, for instance, this CSV file of students, before.csv, below:
+
+```javascript
+name, house
+'Abbott, Hannah', Hufflepuff
+'Bell, Katie', Gryffindor
+'Bones, Susan', Hufflepuff
+'Boot, Terry', Ravenclaw
+'Brown, Lavender', Gryffindor
+'Bulstrode, Millicent', Slytherin
+'Chang, Cho', Ravenclaw
+'Clearwater, Penelope', Ravenclaw
+'Crabbe, Vincent', Slytherin
+'Creevey, Colin', Gryffindor
+'Riddle, Tom', Slytherin
+'Robins, Demelza', Gryffindor
+'Scamander, Newt', Hufflepuff
+```
+
+Even though each “row” in the file has three values (last name, first name, and house), the first two are combined into one “column” (name), escaped with double quotes, with last name and first name separated by a comma and space. Not ideal if Hogwarts wants to send a form letter to each student, as via mail merge, since it’d be strange to start a letter with:
+
+> Dear Potter, Harry,
+
+Rather than with, for instance:
+
+> Dear Harry,
+
+In a file called `scourgify.py`, implement a program that:
+
+- Expects the user to provide two command-line arguments:
+  - The name of an existing CSV file to read as input, whose columns are assumed to be, in order, name and house, and
+  - The name of a new CSV to write as output, whose columns should be, in order, first, last, and house.
+- Converts that input to that output, splitting each name into a first name and last name. Assume that each student will have both a first name and last name.
+
+If the user does not provide exactly two command-line arguments, or if the first cannot be read, the program should exit via sys.exit with an error message.
+
 ## 📁LINES_OF_CODE (problem set 6)
 
 One way to measure the complexity of a program is to count its number of lines of code (LOC), excluding blank lines and comments. For instance, a program like
@@ -46,10 +84,11 @@ Assume that any line that starts with #, optionally preceded by whitespace, is a
 
 In a file called `game.py`, implement a program that:
 
-Prompts the user for a level _n_ 
+Prompts the user for a level _n_
+
 - If the user does not input a positive integer, the program should prompt again.
-- Randomly generates an integer between 1 and 
-_n_ inclusive, using the random module.
+- Randomly generates an integer between 1 and
+  _n_ inclusive, using the random module.
 - Prompts the user to guess that integer. If the guess is not a positive integer, the program should prompt the user again.
   - If the guess is smaller than that integer, the program should output Too small! and prompt the user again.
   - If the guess is larger than that integer, the program should output Too large! and prompt the user again.
@@ -209,4 +248,4 @@ Well, we’ve written most of a tip calculator for you. Unfortunately, we didn�
 - dollars_to_float, which should accept a str as input (formatted as $##.##, wherein each # is a decimal digit), remove the leading $, and return the amount as a float. For instance, given $50.00 as input, it should return 50.0.
 - percent_to_float, which should accept a str as input (formatted as ##%, wherein each # is a decimal digit), remove the trailing %, and return the percentage as a float. For instance, given 15% as input, it should return 0.15.
 
-*Assume that the user will input values in the expected formats.*
+_Assume that the user will input values in the expected formats._
