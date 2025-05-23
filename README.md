@@ -1,11 +1,25 @@
 # Python exercises from CS50P 2022
 
+## 📁SEASONS_OF_LOVE (problem set 8)
+
+Assuming there are 365 days in a year, there are *_365 X 24 X 60 = 525 600_* minutes in that same year (because there are 24 hours in a day and 60 minutes in an hour). But how many minutes are there in two or more years? Well, it depends on how many of those are leap years with 366 days, per the Gregorian calendar, as some of them could have *_1 X 24 X 60_* additional minutes. In fact, how many minutes has it been since you were born? Well, that, too, depends on how many leap years there have been since! There is an algorithm for such, but let’s not reinvent that wheel. Let’s use a library instead. Fortunately, Python comes with a datetime module that has a class called date that can help, per `docs.python.org/3/library/datetime.html#date-objects`.
+
+In a file called `seasons.py`, implement a program that prompts the user for their date of birth in YYYY-MM-DD format and then prints how old they are in minutes, rounded to the nearest integer, using English words instead of numerals, just like the song from Rent, without any "and" between words. Since a user might not know the time at which they were born, assume, for simplicity, that the user was born at midnight (i.e., 00:00:00) on that date. And assume that the current time is also midnight. In other words, even if the user runs the program at noon, assume that it’s actually midnight, on the same date. Use datetime.date.today to get today’s date, per docs.python.org/3/library/datetime.html#datetime.date.today.
+
 ## 📁WATCH_ON_YOUTUBE (problem set 7)
 
 It turns out that (most) YouTube videos can be embedded in other websites, just like the above. For instance, if you visit *https://youtu.be/xvFZjo5PgG0* on a laptop or desktop, click Share, and then click Embed, you’ll see HTML (the language in which web pages are written) like the below, which you could then copy into your own website’s source code, wherein iframe is an HTML “element,” and src is one of several HTML “attributes” therein, the value of which, between quotes, is *https://www.youtube.com/embed/xvFZjo5PgG0*.
 
 ```html
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/xvFZjo5PgG0"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
 ```
 
 Because some HTML attributes are optional, you could instead minimally embed just the below:
@@ -14,9 +28,9 @@ Because some HTML attributes are optional, you could instead minimally embed jus
 <iframe src="https://www.youtube.com/embed/xvFZjo5PgG0"></iframe>
 ```
 
-Suppose that you’d like to extract the URLs of YouTube videos that are embedded in pages *(e.g., https://www.youtube.com/embed/xvFZjo5PgG0)*, converting them back to shorter, shareable youtu.be URLs *(e.g., https://youtu.be/xvFZjo5PgG0)* where they can be watched on YouTube itself.
+Suppose that you’d like to extract the URLs of YouTube videos that are embedded in pages _(e.g., https://www.youtube.com/embed/xvFZjo5PgG0)_, converting them back to shorter, shareable youtu.be URLs _(e.g., https://youtu.be/xvFZjo5PgG0)_ where they can be watched on YouTube itself.
 
-In a file called `watch.py`, implement a function called `parse` that expects a str of HTML as input, extracts any YouTube URL that’s the value of a src attribute of an iframe element therein, and *returns its shorter, shareable youtu.be equivalent as a str*. Expect that any such URL will be in one of the formats below. Assume that the value of src will be surrounded by double quotes. And assume that the input will contain no more than one such URL. If the input does not contain any such URL at all, return None.
+In a file called `watch.py`, implement a function called `parse` that expects a str of HTML as input, extracts any YouTube URL that’s the value of a src attribute of an iframe element therein, and _returns its shorter, shareable youtu.be equivalent as a str_. Expect that any such URL will be in one of the formats below. Assume that the value of src will be surrounded by double quotes. And assume that the input will contain no more than one such URL. If the input does not contain any such URL at all, return None.
 
 - *http://youtube.com/embed/xvFZjo5PgG0*
 - *https://youtube.com/embed/xvFZjo5PgG0*
