@@ -2,9 +2,25 @@
 
 ## 📁SEASONS_OF_LOVE (problem set 8)
 
-Assuming there are 365 days in a year, there are *_365 X 24 X 60 = 525 600_* minutes in that same year (because there are 24 hours in a day and 60 minutes in an hour). But how many minutes are there in two or more years? Well, it depends on how many of those are leap years with 366 days, per the Gregorian calendar, as some of them could have *_1 X 24 X 60_* additional minutes. In fact, how many minutes has it been since you were born? Well, that, too, depends on how many leap years there have been since! There is an algorithm for such, but let’s not reinvent that wheel. Let’s use a library instead. Fortunately, Python comes with a datetime module that has a class called date that can help, per `docs.python.org/3/library/datetime.html#date-objects`.
+Assuming there are 365 days in a year, there are _*365 X 24 X 60 = 525 600*_ minutes in that same year (because there are 24 hours in a day and 60 minutes in an hour). But how many minutes are there in two or more years? Well, it depends on how many of those are leap years with 366 days, per the Gregorian calendar, as some of them could have _*1 X 24 X 60*_ additional minutes. In fact, how many minutes has it been since you were born? Well, that, too, depends on how many leap years there have been since! There is an algorithm for such, but let’s not reinvent that wheel. Let’s use a library instead. Fortunately, Python comes with a datetime module that has a class called date that can help, per `docs.python.org/3/library/datetime.html#date-objects`.
 
 In a file called `seasons.py`, implement a program that prompts the user for their date of birth in YYYY-MM-DD format and then prints how old they are in minutes, rounded to the nearest integer, using English words instead of numerals, just like the song from Rent, without any "and" between words. Since a user might not know the time at which they were born, assume, for simplicity, that the user was born at midnight (i.e., 00:00:00) on that date. And assume that the current time is also midnight. In other words, even if the user runs the program at noon, assume that it’s actually midnight, on the same date. Use datetime.date.today to get today’s date, per docs.python.org/3/library/datetime.html#datetime.date.today.
+
+## 📁COOKIE_JAR (problem set 8)
+
+Suppose that you’d like to implement a cookie jar in which to store cookies. In a file called `jar.py`, implement a class called Jar with these methods:
+
+- `__init__`: should initialize a cookie jar with the given capacity, which represents the maximum number of cookies that can fit in the cookie jar. If capacity is not a non-negative int, though, `__init__` should instead raise a `ValueError`.
+
+- `__str__` should return a str with _*n*_ 🍪, where _*n*_ is the number of cookies in the cookie jar. For instance, if there are 3 cookies in the cookie jar, then str should return "🍪🍪🍪"
+
+- `deposit` should add _*n*_ cookies to the cookie jar. If adding that many would exceed the cookie jar’s capacity, though, deposit should instead raise a `ValueError`.
+
+- `withdraw` should remove _*n*_ cookies from the cookie jar. Nom nom nom. If there aren’t that many cookies in the cookie jar, though, withdraw should instead raise a `ValueError`.
+
+- `capacity` should return the cookie jar’s capacity.
+
+- `size` should return the number of cookies actually in the cookie jar, initially 0.
 
 ## 📁WATCH_ON_YOUTUBE (problem set 7)
 
